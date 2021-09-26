@@ -3,7 +3,7 @@ socks-port: 7881                          # socks port
 port: 7882                                # http port
 allow-lan: true
 mode: rule
-log-level: error
+log-level: warning
 external-controller: 127.0.0.1:9090       # control port
 
 dns:
