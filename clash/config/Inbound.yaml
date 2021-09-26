@@ -128,11 +128,11 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
     path: ./RuleSet/Google域名.yaml
     interval: 86400
-  国外流媒体:
+  国外流媒体域名:
     type: http
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml"
-    path: ./RuleSet/国外流媒体.yaml
+    path: ./RuleSet/国外流媒体域名.yaml
     interval: 86400
   局域网IP:
     type: http
@@ -154,7 +154,7 @@ rules:
   - RULE-SET,GreatFire域名,被墙流量
   - RULE-SET,Apple域名,Apple流量
   - RULE-SET,Google域名,Google流量
-  - RULE-SET,国外流媒体,国外流媒体
+  - RULE-SET,国外流媒体域名,国外流媒体
   - RULE-SET,局域网IP,局域网流量
   - RULE-SET,中国IP,中国流量
   - GEOIP,CN,中国流量
