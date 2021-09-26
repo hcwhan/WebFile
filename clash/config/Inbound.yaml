@@ -19,14 +19,15 @@ proxy-providers:
 proxy-groups:
   - name: 默认代理
     type: select
-    use:
+    proxies:
       - DIRECT
       - REJECT
+    use:
       - LinkCube
 
   - name: 广告域名
     type: select
-    use:
+    proxies:
       - DIRECT
       - REJECT
       - 默认代理
