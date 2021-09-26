@@ -3,11 +3,11 @@ payload:
   # - DOMAIN-SUFFIX,xx.com     域名后缀匹配
   # - DOMAIN-KEYWORD,xx        域名关键字匹配
 
-  - DOMAIN,115.com
+  - DOMAIN-SUFFIX,115.com
 
-  - DOMAIN,dyndns.com
-  - DOMAIN,douyucdn.cn
-  - DOMAIN,douyucdn2.cn
+  - DOMAIN-SUFFIX,dyndns.com
+  - DOMAIN-SUFFIX,douyucdn.cn
+  - DOMAIN-SUFFIX,douyucdn2.cn
 
-  - DOMAIN,speedtest.net
-  - DOMAIN,ooklaserver.net
+  - DOMAIN-SUFFIX,speedtest.net
+  - DOMAIN-SUFFIX,ooklaserver.net
