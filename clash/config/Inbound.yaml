@@ -34,17 +34,20 @@ proxy-providers:
 proxy-groups:
   - name: 默认代理
     type: select
-    use:
-      - LinkCube
     proxies:
       - DIRECT
       - REJECT
+    use:
+      - LinkCube
 
   - name: 代理测速
     type: url-test
+    proxies:
+      - DIRECT
+      - REJECT
     use:
       - LinkCube
-    # tolerance: 150
+    tolerance: 1000
     # lazy: true
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
