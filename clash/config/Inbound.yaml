@@ -32,19 +32,19 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
 
 proxy-groups:
-  - name: 默认代理
+  - name: 🚀默认代理
     type: select
     proxies:
-      - DIRECT
-      - REJECT
+      - ⚪DIRECT
+      - ⚫REJECT
     use:
       - LinkCube
 
-  - name: 代理测速
+  - name: 🗺️代理测速
     type: url-test
     proxies:
-      - DIRECT
-      - REJECT
+      - ⚪DIRECT
+      - ⚫REJECT
     use:
       - LinkCube
     tolerance: 1000
@@ -52,70 +52,82 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
 
-  - name: 自定义代理
+  - name: 🌕自定义代理
     type: select
     proxies:
-      - 默认代理
-      - DIRECT
-      - REJECT
+      - 🚀默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
 
-  - name: 自定义直连
+  - name: 🌑自定义直连
     type: select
     proxies:
-      - DIRECT
-      - REJECT
-      - 默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
+      - 🚀默认代理
 
-  - name: 广告域名
+  - name: 🛑广告域名
     type: select
     proxies:
-      - REJECT
-      - DIRECT
-      - 默认代理
+      - ⚫REJECT
+      - ⚪DIRECT
+      - 🚀默认代理
 
-  - name: 被墙流量
+  - name: ⛔被墙流量
     type: select
     proxies:
-      - 默认代理
-      - DIRECT
-      - REJECT
+      - 🚀默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
 
   - name: Apple流量
     type: select
     proxies:
-      - 默认代理
-      - DIRECT
-      - REJECT
+      - 🚀默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
 
   - name: Google流量
     type: select
     proxies:
-      - 默认代理
-      - DIRECT
-      - REJECT
+      - 🚀默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
 
-  - name: 国外流媒体
+  - name: 🎞️国外流媒体
     type: select
     proxies:
-      - 默认代理
-      - DIRECT
-      - REJECT
+      - 🚀默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
     use:
       - LinkCube
 
-  - name: 局域网流量
+  - name: 🏘️局域网流量
     type: select
     proxies:
-      - DIRECT
-      - REJECT
-      - 默认代理
+      - ⚪DIRECT
+      - ⚫REJECT
+      - 🚀默认代理
 
-  - name: 中国流量
+  - name: 🐼中国流量
+    type: select
+    proxies:
+      - ⚪DIRECT
+      - ⚫REJECT
+      - 🚀默认代理
+
+  - name: ⚪DIRECT
     type: select
     proxies:
       - DIRECT
       - REJECT
-      - 默认代理
+
+  - name: ⚫REJECT
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
 
 rule-providers:
   不代理程序:
@@ -192,17 +204,17 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,不代理程序,DIRECT
-  - RULE-SET,自定义代理域名,自定义代理
-  - RULE-SET,自定义直连域名,自定义直连
-  - RULE-SET,广告域名,广告域名
-  - RULE-SET,GFWList域名,被墙流量
-  - RULE-SET,GreatFire域名,被墙流量
+  - RULE-SET,不代理程序,⚪DIRECT
+  - RULE-SET,自定义代理域名,🌕自定义代理
+  - RULE-SET,自定义直连域名,🌑自定义直连
+  - RULE-SET,广告域名,🛑广告域名
+  - RULE-SET,GFWList域名,⛔被墙流量
+  - RULE-SET,GreatFire域名,⛔被墙流量
   - RULE-SET,Apple域名,Apple流量
   - RULE-SET,iCloud域名,Apple流量
   - RULE-SET,Google域名,Google流量
-  - RULE-SET,国外流媒体域名,国外流媒体
-  - RULE-SET,局域网IP,局域网流量
-  - RULE-SET,中国IP,中国流量
-  - GEOIP,CN,中国流量
-  - MATCH,默认代理
+  - RULE-SET,国外流媒体域名,🎞️国外流媒体
+  - RULE-SET,局域网IP,🏘️局域网流量
+  - RULE-SET,中国IP,🐼中国流量
+  - GEOIP,CN,🐼中国流量
+  - MATCH,🚀默认代理
