@@ -34,17 +34,11 @@ proxy-providers:
 proxy-groups:
   - name: 🚀默认代理
     type: select
-    proxies:
-      - ⚪DIRECT
-      - ⚫REJECT
     use:
       - LinkCube
 
   - name: 🗺️代理测速
     type: url-test
-    proxies:
-      - ⚪DIRECT
-      - ⚫REJECT
     use:
       - LinkCube
     tolerance: 1000
