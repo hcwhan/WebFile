@@ -19,6 +19,10 @@ dns:
   fallback:
     - tls://8.8.8.8:853
     - https://101.6.6.6:8443/dns-query
+  nameserver-policy:
+    '+.sndu.cn': '10.20.0.10'
+    '+.deepin.org': '10.20.0.10'
+    '+.uniontech.com': '10.20.0.10'
 
 proxy-providers:
   LinkCube: # 机场订阅
