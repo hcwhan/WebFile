@@ -4,4 +4,4 @@ payload:
   # - DOMAIN-KEYWORD,xx        域名关键字匹配
 
   - DOMAIN-SUFFIX,v2ex.com
-  - DOMAIN-SUFFIX,steam.com
+#  - DOMAIN-SUFFIX,steam.com
