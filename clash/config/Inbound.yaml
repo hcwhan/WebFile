@@ -23,6 +23,7 @@ dns:
   nameserver-policy:
     '+.sndu.cn': '10.20.0.10'
     '+.deepin.org': '10.20.0.10'
+    '+.deepin.com': '10.20.0.10'
     '+.uniontech.com': '10.20.0.10'
 
 proxy-providers:
