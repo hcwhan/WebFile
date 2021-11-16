@@ -15,4 +15,4 @@ payload:
   - DOMAIN-SUFFIX,steam-chat.com
   - DOMAIN-SUFFIX,steamstatic.com
   - DOMAIN-SUFFIX,cm.steampowered.com
-  # - DOMAIN-SUFFIX,api.steampowered.com
+  - DOMAIN-SUFFIX,api.steampowered.com
