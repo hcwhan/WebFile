@@ -27,11 +27,21 @@ dns:
     '+.uniontech.com': '10.20.0.10'
 
 proxy-providers:
-  LinkCube: # 机场订阅
+  LinkCube: # LinkCube机场订阅
     type: http
     url: "https://api.linksubscribe.cc/sub?target=clash&emoji=true&url=https%3A%2F%2Flinkcube.co%2Fmodules%2Fservers%2FV2raySocks%2Fosubscribe.php%3Fsid%3D2476%26token%3DcwV8pVhFeOd8%26sip002%3D1"
     interval: 86400
     path: ./Proxy/LinkCube.yaml
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  mccloud: # mccloud机场订阅
+    type: http
+    url: "https://mcwy.xyz/link/eI00qMwbscyySBxb?clash=1"
+    interval: 86400
+    path: ./Proxy/mccloud.yaml
     health-check:
       enable: true
       interval: 600
@@ -42,11 +52,13 @@ proxy-groups:
     type: select
     use:
       - LinkCube
+      - mccloud
 
   - name: 🗺️代理测速
     type: url-test
     use:
       - LinkCube
+      - mccloud
     tolerance: 1000
     # lazy: true
     url: 'http://www.gstatic.com/generate_204'
