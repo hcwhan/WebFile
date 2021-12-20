@@ -29,7 +29,7 @@ dns:
 proxy-providers:
   LinkCube: # LinkCube机场订阅
     type: http
-    url: "https://api.linksubscribe.cc/sub?target=clash&emoji=true&url=https%3A%2F%2Flinkcube.co%2Fmodules%2Fservers%2FV2raySocks%2Fosubscribe.php%3Fsid%3D2476%26token%3DcwV8pVhFeOd8%26sip002%3D1"
+    url: "https://api.linksubscribe.cc/sub?target=clash&emoji=true&udp=true&new_name=true&filename=LinkCube&config=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSleepyHeeead%2Fsubconverter-config%40master%2Fremote-config%2Fspecial%2Fbasic.ini&url=https%3A%2F%2Flinkcube.co%2Fmodules%2Fservers%2FV2raySocks%2Fosubscribe.php%3Fsid%3D2476%26token%3DcwV8pVhFeOd8"
     interval: 86400
     path: ./Proxy/LinkCube.yaml
     health-check:
